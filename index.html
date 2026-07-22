@@ -75,7 +75,7 @@
     <!-- SECCIÓN HERO -->
     <section class="bg-gradient-to-b from-white to-cream py-12 md:py-16 px-4 text-center border-b border-gold/20">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pijamas y sets de tus universos favoritos</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pijamas, sets y uniformes deportivos</h1>
             <p class="text-lg text-gray-600 mb-6 italic">Diseño, comodidad y estilo para toda la familia.</p>
             <div class="inline-block border-t border-b border-gold py-2 px-4 md:px-6">
                 <p class="text-sm tracking-widest text-gold-dark font-medium uppercase">✨ Comodidad que amas, estilo que te representa ✨</p>
@@ -86,7 +86,7 @@
     <!-- CATÁLOGO DE PRODUCTOS -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full">
         <h2 class="text-3xl font-bold text-center mb-2">Nuestras Colecciones</h2>
-        <p class="text-center text-gray-500 mb-10">Desliza las miniaturas de cada colección para ver los personajes y tallas disponibles</p>
+        <p class="text-center text-gray-500 mb-10">Desliza las miniaturas de cada colección para ver los personajes, estilos y tallas disponibles</p>
 
         <!-- Grilla de Colecciones -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -96,10 +96,8 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-univ" src="pijama1.jpg" alt="Pijamas Universos" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <!-- ETIQUETA FLOTANTE SUPERIOR: Solo muestra el nombre del diseño/personaje -->
                         <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Rock</span>
                     </div>
-                    <!-- Miniaturas con scroll horizontal -->
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
                         <button onclick="changeImageWithPrice('univ', 'pijama1.jpg', 'Rock', 'Caballero · Talla XS a L', 50000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="pijama1.jpg" class="w-full h-full object-contain"></button>
                         <button onclick="changeImageWithPrice('univ', 'pijama2.jpg', 'Fucks News', 'Dama · Talla XS a L', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama2.jpg" class="w-full h-full object-contain"></button>
@@ -131,7 +129,6 @@
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Colección Principal</span>
                         <h3 class="text-xl font-bold mt-2">Sets Pijamas Universos</h3>
-                        <!-- PIE DE LA IMAGEN / DESCRIPCIÓN: Aquí aparece el género y las tallas -->
                         <p id="name-univ" class="text-sm text-gray-600 mt-1 font-medium">Caballero · Talla XS a L</p>
                         <p id="price-univ" class="text-2xl font-bold text-black mt-3">$ 50.000 COP</p>
                     </div>
@@ -234,7 +231,7 @@
             </div>
 
             <!-- 5. SETS FEMENINOS -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30 md:col-span-2 max-w-xl mx-auto w-full" data-product-id="fem">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="fem">
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-fem" src="femenina1.jpg" alt="Sets Femeninos" class="w-full h-72 object-contain p-2 transition-all duration-300">
@@ -258,6 +255,33 @@
                 </div>
                 <div class="p-5 pt-0">
                     <button onclick="addCurrentToCart('fem')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. UNIFORMES DE FÚTBOL (ACTUALIZADO) -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="futbol">
+                <div>
+                    <div class="relative bg-gray-50">
+                        <img id="img-futbol" src="deportivo1.jpg" alt="Uniformes de Fútbol" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-futbol" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Dragón blanco</span>
+                    </div>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('futbol', 'deportivo1.jpg', 'Dragón blanco', 'Uniforme de fútbol Niños', 40000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="deportivo1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('futbol', 'deportivo2.jpg', 'Dragón fucsia', 'Uniformes de fútbol Dama', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('futbol', 'deportivo3.jpg', 'Samurai', 'Uniformes de fútbol Caballero', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('futbol', 'deportivo.jpg', 'Tasmania', 'Uniformes de fútbol manga larga adulto', 60000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo.jpg" class="w-full h-full object-contain"></button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Deportivo</span>
+                        <h3 class="text-xl font-bold mt-2">Uniformes de Fútbol</h3>
+                        <p id="name-futbol" class="text-sm text-gray-600 mt-1 font-medium">Uniforme de fútbol Niños</p>
+                        <p id="price-futbol" class="text-2xl font-bold text-black mt-3">$ 40.000 COP</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addCurrentToCart('futbol')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
@@ -334,7 +358,8 @@
             prem: 70000,
             satin: 65000,
             suda: 130000,
-            fem: 25000
+            fem: 25000,
+            futbol: 40000
         };
 
         function toggleCart() {
