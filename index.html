@@ -32,7 +32,6 @@
         h1, h2, h3, .brand-font {
             font-family: 'Playfair Display', serif;
         }
-        /* Ocultar barra de desplazamiento pero permitir scroll */
         .no-scrollbar::-webkit-scrollbar {
             height: 6px;
         }
@@ -97,41 +96,43 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-univ" src="pijama1.jpg" alt="Pijamas Universos" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Caballero · Talla XS a L</span>
+                        <!-- AQUÍ APARECE EL NOMBRE ARRIBA EN LA ETIQUETA -->
+                        <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Rock</span>
                     </div>
-                    <!-- Miniaturas con scroll horizontal (26 items) -->
+                    <!-- Miniaturas con scroll horizontal -->
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
-                        <button onclick="changeImageWithPrice('univ', 'pijama1.jpg', 'Set Pijama Universos - Rock (Caballero XS a L)', 50000, 'Caballero · Talla XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="pijama1.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama2.jpg', 'Set Pijama Universos - Fucks News (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama2.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama3.jpg', 'Set Pijama Universos - Dragón Ball (Niño 2 a 8)', 35000, 'Niño · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama4.jpg', 'Set Pijama Universos - K-Pop (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama4.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama5.jpg', 'Set Pijama Universos - Barbie (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama5.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama6.jpg', 'Set Pijama Universos - Kuromy (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama6.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama7.jpg', 'Set Pijama Universos - Bob Esponja/Melody (Niña 10 a 14)', 42000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama7.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama8.jpg', 'Set Pijama Universos - Stitch (Dama Short/Tiras)', 35000, 'Dama · Short/Tiras', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama8.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama9.jpg', 'Set Pijama Universos - Dragón Ball (Caballero XS a L)', 50000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama9.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama10.jpg', 'Set Pijama Universos - Lucifer (Dama Shorts XS a L)', 35000, 'Dama · Shorts XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama10.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama11.jpg', 'Set Pijama Universos - Chicas Superpoderosas (Niña 10 a 14)', 32000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama11.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama12.jpg', 'Set Pijama Universos - Goku (Niños 10 a 14)', 38000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama12.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama13.jpg', 'Set Pijama Universos - Demon Slayer (Niños 10 a 14)', 42000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama13.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama14.jpg', 'Set Pijama Universos - Nezuko (Niñas 10 a 14)', 42000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama14.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama15.jpg', 'Set Pijama Universos - BTS (Niñas 10 a 14)', 38000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama15.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama16.jpg', 'Set Pijama Universos - BTS (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama16.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama17.jpg', 'Set Pijama Universos - One Piece (Niño pantaloneta 10 a 14)', 32000, 'Niño · Pantaloneta 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama17.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama18.jpg', 'Set Pijama Universos - Winnie Pooh (Niñas 10 a 14)', 32000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama18.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama19.jpg', 'Set Pijama Universos - Cuadros (Caballero pantaloneta XS a L)', 38000, 'Caballero · Pantaloneta XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama19.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama20.jpg', 'Set Pijama Universos - Jack (Dama Shorts XS a L)', 35000, 'Dama · Shorts XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama20.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama21.jpg', 'Set Pijama Universos - Paw Patrol (Bebé 0/12 meses)', 28000, 'Bebé · 0/12 meses', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama21.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama22.jpg', 'Set Pijama Universos - Dinosaurios (Bebé 0/12 meses)', 28000, 'Bebé · 0/12 meses', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama22.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama23.jpg', 'Set Pijama Universos - Princesas (Niñas 2 a 8)', 35000, 'Niñas · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama23.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama24.jpg', 'Set Pijama Universos - Capitán América/Simpsons (Caballero XS a L)', 38000, 'Caballero · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama24.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama25.jpg', 'Set Pijama Universos - BTS (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama25.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('univ', 'pijama26.jpg', 'Set Pijama Universos - Snoopy (Dama Plus)', 60000, 'Dama · Plus', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama26.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama1.jpg', 'Rock', 'Caballero · Talla XS a L', 50000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="pijama1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama2.jpg', 'Fucks News', 'Dama · Talla XS a L', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama3.jpg', 'Dragón Ball', 'Niño · Talla 2 a 8', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama4.jpg', 'K-Pop', 'Niña · Talla 2 a 8', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama5.jpg', 'Barbie', 'Niña · Talla 2 a 8', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama6.jpg', 'Kuromy', 'Niña · Talla 2 a 8', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama7.jpg', 'Bob Esponja/Melody', 'Niña · Talla 10 a 14', 42000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama7.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama8.jpg', 'Stitch', 'Dama · Short/Tiras', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama8.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama9.jpg', 'Dragón Ball', 'Caballero · Talla XS a L', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama9.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama10.jpg', 'Lucifer', 'Dama · Shorts XS a L', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama10.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama11.jpg', 'Chicas Superpoderosas', 'Niña · Shorts 10 a 14', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama11.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama12.jpg', 'Goku', 'Niños · Talla 10 a 14', 38000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama12.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama13.jpg', 'Demon Slayer', 'Niños · Talla 10 a 14', 42000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama13.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama14.jpg', 'Nezuko', 'Niñas · Talla 10 a 14', 42000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama14.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama15.jpg', 'BTS', 'Niñas · Talla 10 a 14', 38000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama15.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama16.jpg', 'BTS', 'Dama · Talla XS a L', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama16.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama17.jpg', 'One Piece', 'Niño pantaloneta 10 a 14', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama17.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama18.jpg', 'Winnie Pooh', 'Niñas · Talla 10 a 14', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama18.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama19.jpg', 'Cuadros', 'Caballero pantaloneta XS a L', 38000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama19.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama20.jpg', 'Jack', 'Dama · Shorts XS a L', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama20.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama21.jpg', 'Paw Patrol', 'Bebé · 0/12 meses', 28000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama21.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama22.jpg', 'Dinosaurios', 'Bebé · 0/12 meses', 28000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama22.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama23.jpg', 'Princesas', 'Niñas · Talla 2 a 8', 35000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama23.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama24.jpg', 'Capitán América/Simpsons', 'Caballero · XS a L', 38000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama24.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama25.jpg', 'BTS', 'Dama · Talla XS a L', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama25.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama26.jpg', 'Snoopy', 'Dama · Plus', 60000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama26.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Colección Principal</span>
                         <h3 class="text-xl font-bold mt-2">Sets Pijamas Universos</h3>
-                        <p id="name-univ" class="text-sm text-gray-600 mt-1 font-medium">Set Pijama Universos - Rock (Caballero XS a L)</p>
+                        <!-- AQUÍ ABAJO APARECE LA DESCRIPCIÓN DE TALLAS/GÉNERO -->
+                        <p id="name-univ" class="text-sm text-gray-600 mt-1 font-medium">Caballero · Talla XS a L</p>
                         <p id="price-univ" class="text-2xl font-bold text-black mt-3">$ 50.000 COP</p>
                     </div>
                 </div>
@@ -147,25 +148,25 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-prem" src="premium1.jpg" alt="Pijamas Premium" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <span id="badge-prem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Niños · Tres piezas (2 a 8)</span>
+                        <span id="badge-prem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Bob Esponja</span>
                     </div>
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
-                        <button onclick="changeImageWithPrice('prem', 'premium1.jpg', 'Pijama Premium - Bob Esponja (Niños 3 pzas 2 a 8)', 70000, 'Niños · Tres piezas (2 a 8)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="premium1.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium2.jpg', 'Pijama Premium - Nezuko (Niñas 3 pzas 10 a 14)', 82000, 'Niñas · Tres piezas (10 a 14)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium2.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium3.jpg', 'Pijama Premium - Stranger Things (Caballero 3 pzas XS-L)', 110000, 'Caballero · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium4.jpg', 'Pijama Premium - Dragón Ball (Caballero 3 pzas XS-L)', 90000, 'Caballero · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium4.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium5.jpg', 'Pijama Premium - Dinosaurios (Caballero 4 pzas XS-L)', 130000, 'Caballero · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium5.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium6.jpg', 'Pijama Premium - Capibara (Niñas 3 pzas 2 a 8)', 62000, 'Niñas · Tres piezas (2 a 8)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium6.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium7.jpg', 'Pijama Premium - Sonic (Niños 3 pzas 10 a 14)', 78000, 'Niños · Tres piezas (10 a 14)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium7.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium8.jpg', 'Pijama Premium - Tom y Jerry (Dama 3 pzas XS-L)', 85000, 'Dama · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium8.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium9.jpg', 'Pijama Premium - Nezuko (Dama 4 pzas XS-L)', 125000, 'Dama · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium9.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium10.jpg', 'Pijama Premium - Harry Potter (Dama 4 pzas XS-L)', 125000, 'Dama · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium10.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('prem', 'premium11.jpg', 'Pijama Premium - Jack (Dama 3 pzas XS-L)', 75000, 'Dama · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium11.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium1.jpg', 'Bob Esponja', 'Niños · Tres piezas (2 a 8)', 70000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="premium1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium2.jpg', 'Nezuko', 'Niñas · Tres piezas (10 a 14)', 82000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium3.jpg', 'Stranger Things', 'Caballero · Tres piezas (XS-L)', 110000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium4.jpg', 'Dragón Ball', 'Caballero · Tres piezas (XS-L)', 90000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium5.jpg', 'Dinosaurios', 'Caballero · Cuatro piezas (XS-L)', 130000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium6.jpg', 'Capibara', 'Niñas · Tres piezas (2 a 8)', 62000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium7.jpg', 'Sonic', 'Niños · Tres piezas (10 a 14)', 78000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium7.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium8.jpg', 'Tom y Jerry', 'Dama · Tres piezas (XS-L)', 85000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium8.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium9.jpg', 'Nezuko', 'Dama · Cuatro piezas (XS-L)', 125000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium9.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium10.jpg', 'Harry Potter', 'Dama · Cuatro piezas (XS-L)', 125000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium10.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium11.jpg', 'Jack', 'Dama · Tres piezas (XS-L)', 75000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium11.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Alta Calidad</span>
                         <h3 class="text-xl font-bold mt-2">Pijamas Premium</h3>
-                        <p id="name-prem" class="text-sm text-gray-600 mt-1 font-medium">Pijama Premium - Bob Esponja (Niños 3 pzas 2 a 8)</p>
+                        <p id="name-prem" class="text-sm text-gray-600 mt-1 font-medium">Niños · Tres piezas (2 a 8)</p>
                         <p id="price-prem" class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
                     </div>
                 </div>
@@ -181,18 +182,18 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-satin" src="satin1.jpg" alt="Pijamas Satín" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <span id="badge-satin" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Dama · Talla XS a L</span>
+                        <span id="badge-satin" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Elegante</span>
                     </div>
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
-                        <button onclick="changeImageWithPrice('satin', 'satin1.jpg', 'Set Pijama Satín - Elegante (Dama XS a L)', 65000, 'Dama · Talla XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="satin1.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('satin', 'satin2.jpg', 'Set Pijama Satín - Kuromy (Niña 10 a 14)', 55000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin2.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('satin', 'satin3.jpg', 'Set Pijama Satín - Paw Patrol (Niña 2 a 8)', 45000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('satin', 'satin4.jpg', 'Set Pijama Satín - Hello Kitty (Niña Shorts 2 a 8)', 40000, 'Niña · Shorts 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin1.jpg', 'Elegante', 'Dama · Talla XS a L', 65000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="satin1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin2.jpg', 'Kuromy', 'Niña · Talla 10 a 14', 55000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin3.jpg', 'Paw Patrol', 'Niña · Talla 2 a 8', 45000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin4.jpg', 'Hello Kitty', 'Niña · Shorts 2 a 8', 40000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin4.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Elegancia</span>
                         <h3 class="text-xl font-bold mt-2">Set Pijama Satín</h3>
-                        <p id="name-satin" class="text-sm text-gray-600 mt-1 font-medium">Set Pijama Satín - Elegante (Dama XS a L)</p>
+                        <p id="name-satin" class="text-sm text-gray-600 mt-1 font-medium">Dama · Talla XS a L</p>
                         <p id="price-satin" class="text-2xl font-bold text-black mt-3">$ 65.000 COP</p>
                     </div>
                 </div>
@@ -208,20 +209,20 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-suda" src="sudadera1.jpg" alt="Sudaderas" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <span id="badge-suda" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Dama · Chaqueta XS a L</span>
+                        <span id="badge-suda" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Sailor Moon</span>
                     </div>
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
-                        <button onclick="changeImageWithPrice('suda', 'sudadera1.jpg', 'Sudadera - Sailor Moon (Dama chaqueta XS a L)', 130000, 'Dama · Chaqueta XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="sudadera1.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('suda', 'sudadera2.jpg', 'Sudadera - Negra/Amarillo (Dama buzo XS a L)', 120000, 'Dama · Buzo XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera2.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('suda', 'sudadera3.jpg', 'Sudadera - Infantiles (Niños 10 a 14)', 90000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('suda', 'sudadera4.jpg', 'Sudadera - Gris/Negro (Caballero XS a L)', 120000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera4.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('suda', 'sudadera5.jpg', 'Sudadera - Negro/Rojo (Caballero XS a L)', 120000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera5.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('suda', 'sudadera6.jpg', 'Sudadera - Infantiles (Niños 2 a 8)', 65000, 'Niños · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera1.jpg', 'Sailor Moon', 'Dama · Chaqueta XS a L', 130000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="sudadera1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera2.jpg', 'Negra/Amarillo', 'Dama · Buzo XS a L', 120000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera3.jpg', 'Infantiles', 'Niños · Talla 10 a 14', 90000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera4.jpg', 'Gris/Negro', 'Caballero · Talla XS a L', 120000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera5.jpg', 'Negro/Rojo', 'Caballero · Talla XS a L', 120000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera6.jpg', 'Infantiles', 'Niños · Talla 2 a 8', 65000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera6.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Abrigo & Estilo</span>
                         <h3 class="text-xl font-bold mt-2">Sudaderas Personalizadas</h3>
-                        <p id="name-suda" class="text-sm text-gray-600 mt-1 font-medium">Sudadera - Sailor Moon (Dama chaqueta XS a L)</p>
+                        <p id="name-suda" class="text-sm text-gray-600 mt-1 font-medium">Dama · Chaqueta XS a L</p>
                         <p id="price-suda" class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
                     </div>
                 </div>
@@ -237,21 +238,21 @@
                 <div>
                     <div class="relative bg-gray-50">
                         <img id="img-fem" src="femenina1.jpg" alt="Sets Femeninos" class="w-full h-72 object-contain p-2 transition-all duration-300">
-                        <span id="badge-fem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Batas · XS a L</span>
+                        <span id="badge-fem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Bugs Bunny</span>
                     </div>
                     <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
-                        <button onclick="changeImageWithPrice('fem', 'femenina1.jpg', 'Set Femenino - Bugs Bunny (Batas XS a L)', 25000, 'Batas · XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="femenina1.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina2.jpg', 'Set Femenino - Goofy (Batas XS a L)', 25000, 'Batas · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina2.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina3.jpg', 'Set Femenino - Stitch (Enterizo Shorts XS a L)', 32000, 'Enterizo Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina4.jpg', 'Set Femenino - Sailor Moon (Enterizo Shorts XS a L)', 32000, 'Enterizo Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina4.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina5.jpg', 'Set Femenino - Infantiles (Enterizos shorts 2 a 14)', 26000, 'Enterizos shorts · 2 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina5.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina6.jpg', 'Set Femenino - Naruto (Body/Shorts XS a L)', 32000, 'Body/Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina6.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('fem', 'femenina7.jpg', 'Set Femenino - Simpson (Body/Shorts XS a L)', 32000, 'Body/Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina7.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina1.jpg', 'Bugs Bunny', 'Batas · XS a L', 25000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="femenina1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina2.jpg', 'Goofy', 'Batas · XS a L', 25000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina3.jpg', 'Stitch', 'Enterizo Shorts · XS a L', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina4.jpg', 'Sailor Moon', 'Enterizo Shorts · XS a L', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina5.jpg', 'Infantiles', 'Enterizos shorts · 2 a 14', 26000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina6.jpg', 'Naruto', 'Body/Shorts · XS a L', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina7.jpg', 'Simpson', 'Body/Shorts · XS a L', 32000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina7.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Femenino</span>
                         <h3 class="text-xl font-bold mt-2">Sets Femeninos</h3>
-                        <p id="name-fem" class="text-sm text-gray-600 mt-1 font-medium">Set Femenino - Bugs Bunny (Batas XS a L)</p>
+                        <p id="name-fem" class="text-sm text-gray-600 mt-1 font-medium">Batas · XS a L</p>
                         <p id="price-fem" class="text-2xl font-bold text-black mt-3">$ 25.000 COP</p>
                     </div>
                 </div>
@@ -328,7 +329,6 @@
     <script>
         let cart = [];
 
-        // Precios actuales seleccionados por cada colección
         let productPrices = {
             univ: 50000,
             prem: 70000,
@@ -342,10 +342,10 @@
             modal.classList.toggle('hidden');
         }
 
-        function changeImageWithPrice(productId, imageSrc, description, price, badgeText, buttonElement) {
+        function changeImageWithPrice(productId, imageSrc, badgeText, descriptionText, price, buttonElement) {
             document.getElementById(`img-${productId}`).src = imageSrc;
-            document.getElementById(`name-${productId}`).textContent = description;
             document.getElementById(`badge-${productId}`).textContent = badgeText;
+            document.getElementById(`name-${productId}`).textContent = descriptionText;
             
             productPrices[productId] = price;
             document.getElementById(`price-${productId}`).textContent = `$ ${price.toLocaleString()} COP`;
@@ -361,17 +361,21 @@
         }
 
         function addCurrentToCart(productId) {
-            const productName = document.getElementById(`name-${productId}`).textContent;
+            const collectionTitle = document.querySelector(`[data-product-id="${productId}"] h3`).textContent;
+            const characterName = document.getElementById(`badge-${productId}`).textContent;
+            const detailsText = document.getElementById(`name-${productId}`).textContent;
             const productPrice = productPrices[productId];
             
-            const existingItem = cart.find(item => item.name === productName);
+            const fullName = `${collectionTitle} - ${characterName} (${detailsText})`;
+            
+            const existingItem = cart.find(item => item.name === fullName);
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
-                cart.push({ name: productName, price: productPrice, quantity: 1 });
+                cart.push({ name: fullName, price: productPrice, quantity: 1 });
             }
             updateCartUI();
-            alert(`¡"${productName}" agregado al carrito!`);
+            alert(`¡"${collectionTitle} - ${characterName}" agregado al carrito!`);
         }
 
         function updateCartUI() {
