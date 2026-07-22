@@ -47,11 +47,11 @@
             <div class="flex items-center space-x-4 md:space-x-6">
                 <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
                     <a href="#catalogo" class="hover:text-gold transition">Catálogo</a>
-                    <a href="https://www.instagram.com/_u/Melanystudio.co" target="_blank" class="text-pink-600 hover:scale-110 transition flex items-center space-x-1">
+                    <a href="https://www.instagram.com/melanystudio.co/" target="_blank" rel="noopener noreferrer" class="text-pink-600 hover:scale-110 transition flex items-center space-x-1">
                         <i class="fa-brands fa-instagram text-xl"></i>
                         <span class="hidden lg:inline">Instagram</span>
                     </a>
-                    <a href="https://wa.me/573125199941" target="_blank" class="text-green-600 hover:scale-110 transition flex items-center space-x-1">
+                    <a href="https://wa.me/573125199941" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:scale-110 transition flex items-center space-x-1">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
                         <span class="hidden lg:inline">312 519 9941</span>
                     </a>
@@ -79,96 +79,159 @@
     <!-- CATÁLOGO DE PRODUCTOS -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full">
         <h2 class="text-3xl font-bold text-center mb-2">Nuestras Colecciones</h2>
-        <p class="text-center text-gray-500 mb-10">Diseños exclusivos para Dama, Caballero y Niños</p>
+        <p class="text-center text-gray-500 mb-10">Haz clic en las miniaturas para ver los diferentes diseños disponibles</p>
 
         <!-- Grilla de Productos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- 1. Set Pijama Universos -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30">
+            <!-- PRODUCTO 1: Set Pijama Universos -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="univ">
                 <div>
-                    <img src="pijama1.jpg" alt="Set Pijama Universos" class="w-full h-64 object-cover">
+                    <!-- Imagen Principal -->
+                    <div class="relative">
+                        <img id="img-univ" src="pijama1.jpg" alt="Set Pijama Universos" class="w-full h-64 object-cover transition-all duration-300">
+                        <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    </div>
+                    <!-- Miniaturas / Selector de Fotos -->
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
+                        <button onclick="changeImage('univ', 'pijama1.jpg', 'Set Pijama Universos (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
+                            <img src="pijama1.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('univ', 'pijama2.jpg', 'Set Pijama Universos (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
+                            <img src="pijama2.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <!-- Aquí podrás agregar más fotos en el futuro simplemente copiando un botón igual cambiando pijama3.jpg -->
+                    </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Universos</span>
                         <h3 class="text-xl font-bold mt-2">Set Pijama Universos</h3>
                         <p class="text-sm text-gray-500 mt-1">Estampados icónicos para Dama y Caballero.</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 50.000 COP</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addToCart('Set Pijama Universos', 50000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
-
-            <!-- 2. Pijamas Premium (Con Capota) -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30">
-                <div>
-                    <img src="premium1.jpg" alt="Pijamas Premium" class="w-full h-64 object-cover">
-                    <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Premium</span>
-                        <h3 class="text-xl font-bold mt-2">Pijama Premium con Capota</h3>
-                        <p class="text-sm text-gray-500 mt-1">Estilo hoodie y abrigo superior para niños y niñas.</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 120.000 COP</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addToCart('Pijama Premium con Capota', 120000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
-
-            <!-- 3. Pijamas en Satín -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30">
-                <div>
-                    <img src="satin1.jpg" alt="Pijamas en Satín" class="w-full h-64 object-cover">
-                    <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Satín</span>
-                        <h3 class="text-xl font-bold mt-2">Set Pijama en Satín</h3>
-                        <p class="text-sm text-gray-500 mt-1">Fresco, suave y elegante.</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addToCart('Set Pijama en Satín', 70000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
-
-            <!-- 4. Sudaderas Personalizadas -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30">
-                <div>
-                    <img src="sudadera1.jpg" alt="Sudaderas Personalizadas" class="w-full h-64 object-cover">
-                    <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Sudaderas</span>
-                        <h3 class="text-xl font-bold mt-2">Sudadera Personalizada</h3>
-                        <p class="text-sm text-gray-500 mt-1">Diseños únicos y máxima comodidad.</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addToCart('Sudadera Personalizada', 130000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
-                        Agregar al Carrito
-                    </button>
-                </div>
-            </div>
-
-            <!-- 5. Uniformes Deportivos -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30">
-                <div>
-                    <img src="deportivo1.jpg" alt="Uniformes Deportivos" class="w-full h-64 object-cover">
-                    <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Deportivo</span>
-                        <h3 class="text-xl font-bold mt-2">Uniforme Deportivo</h3>
-                        <p class="text-sm text-gray-500 mt-1">Con estilo moderno y tela deportiva fresca.</p>
+                        <p id="name-univ" class="hidden">Set Pijama Universos (Diseño 1)</p>
                         <p class="text-2xl font-bold text-black mt-3">$ 60.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('Uniforme Deportivo', 60000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addSelectedToCart('univ', 60000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2: Pijamas Premium (Con Capota) -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="prem">
+                <div>
+                    <div class="relative">
+                        <img id="img-prem" src="premium1.jpg" alt="Pijamas Premium" class="w-full h-64 object-cover transition-all duration-300">
+                        <span id="badge-prem" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    </div>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
+                        <button onclick="changeImage('prem', 'premium1.jpg', 'Pijama Premium (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
+                            <img src="premium1.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('prem', 'premium2.jpg', 'Pijama Premium (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
+                            <img src="premium2.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Premium</span>
+                        <h3 class="text-xl font-bold mt-2">Pijama Premium con Capota</h3>
+                        <p class="text-sm text-gray-500 mt-1">Estilo hoodie y abrigo superior.</p>
+                        <p id="name-prem" class="hidden">Pijama Premium (Diseño 1)</p>
+                        <p class="text-2xl font-bold text-black mt-3">$ 120.000 COP</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addSelectedToCart('prem', 120000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3: Pijamas en Satín -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="satin">
+                <div>
+                    <div class="relative">
+                        <img id="img-satin" src="satin1.jpg" alt="Pijamas en Satín" class="w-full h-64 object-cover transition-all duration-300">
+                        <span id="badge-satin" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    </div>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
+                        <button onclick="changeImage('satin', 'satin1.jpg', 'Set Pijama Satín (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
+                            <img src="satin1.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('satin', 'satin2.jpg', 'Set Pijama Satín (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
+                            <img src="satin2.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Satín</span>
+                        <h3 class="text-xl font-bold mt-2">Set Pijama en Satín</h3>
+                        <p class="text-sm text-gray-500 mt-1">Fresco, suave y elegante.</p>
+                        <p id="name-satin" class="hidden">Set Pijama Satín (Diseño 1)</p>
+                        <p class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addSelectedToCart('satin', 70000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 4: Sudaderas Personalizadas -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="suda">
+                <div>
+                    <div class="relative">
+                        <img id="img-suda" src="sudadera1.jpg" alt="Sudaderas Personalizadas" class="w-full h-64 object-cover transition-all duration-300">
+                        <span id="badge-suda" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    </div>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
+                        <button onclick="changeImage('suda', 'sudadera1.jpg', 'Sudadera (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
+                            <img src="sudadera1.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('suda', 'sudadera2.jpg', 'Sudadera (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
+                            <img src="sudadera2.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Sudaderas</span>
+                        <h3 class="text-xl font-bold mt-2">Sudadera Personalizada</h3>
+                        <p class="text-sm text-gray-500 mt-1">Diseños únicos y máxima comodidad.</p>
+                        <p id="name-suda" class="hidden">Sudadera (Diseño 1)</p>
+                        <p class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addSelectedToCart('suda', 130000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 5: Uniformes Deportivos -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="depo">
+                <div>
+                    <div class="relative">
+                        <img id="img-depo" src="deportivo1.jpg" alt="Uniformes Deportivos" class="w-full h-64 object-cover transition-all duration-300">
+                        <span id="badge-depo" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    </div>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
+                        <button onclick="changeImage('depo', 'deportivo1.jpg', 'Uniforme Deportivo (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
+                            <img src="deportivo1.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="changeImage('depo', 'deportivo2.jpg', 'Uniforme Deportivo (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
+                            <img src="deportivo2.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Deportivo</span>
+                        <h3 class="text-xl font-bold mt-2">Uniforme Deportivo</h3>
+                        <p class="text-sm text-gray-500 mt-1">Con estilo moderno y tela deportiva fresca.</p>
+                        <p id="name-depo" class="hidden">Uniforme Deportivo (Diseño 1)</p>
+                        <p class="text-2xl font-bold text-black mt-3">$ 60.000 COP</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addSelectedToCart('depo', 60000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
@@ -179,7 +242,7 @@
         <div class="mt-16 text-center bg-black text-gold p-6 rounded-xl shadow-inner">
             <h3 class="text-2xl font-bold">¿Quieres personalizar tu propio diseño o conjunto familiar?</h3>
             <p class="text-gray-300 mt-2 mb-4">Escríbenos directamente a WhatsApp y te ayudamos a crearlo.</p>
-            <a href="https://wa.me/573125199941" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg">
+            <a href="https://wa.me/573125199941" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg">
                 <i class="fa-brands fa-whatsapp mr-2"></i> Chatear con Melany Studio
             </a>
         </div>
@@ -222,11 +285,11 @@
             <p class="text-sm text-gray-400"><i class="fas fa-map-marker-alt mr-2 text-gold"></i> Soacha, Colombia</p>
             
             <div class="flex flex-col items-center justify-center space-y-4 pt-4 border-t border-gray-700">
-                <a href="https://www.instagram.com/Melanystudio.co" target="_blank" class="hover:text-gold transition flex items-center justify-center space-x-2">
+                <a href="https://www.instagram.com/melanystudio.co/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition flex items-center justify-center space-x-2">
                     <i class="fa-brands fa-instagram text-2xl"></i>
-                    <span class="text-sm">@Melanystudio.co</span>
+                    <span class="text-sm">@melanystudio.co</span>
                 </a>
-                <a href="https://wa.me/573125199941" target="_blank" class="hover:text-gold transition flex items-center justify-center space-x-2">
+                <a href="https://wa.me/573125199941" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition flex items-center justify-center space-x-2">
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
                     <span class="text-sm">+57 312 519 9941</span>
                 </a>
@@ -245,15 +308,37 @@
             modal.classList.toggle('hidden');
         }
 
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
+        // Función para cambiar la foto grande y registrar qué diseño está seleccionado
+        function changeImage(productId, imageSrc, description, buttonElement) {
+            // Cambiar imagen principal
+            document.getElementById(`img-${productId}`).src = imageSrc;
+            
+            // Guardar ocultamente el nombre/diseño exacto seleccionado
+            document.getElementById(`name-${productId}`).textContent = description;
+
+            // Actualizar estilo visual de las miniaturas (marcar con borde dorado la activa)
+            const parentContainer = buttonElement.parentElement;
+            const buttons = parentContainer.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-gold', 'border-gold');
+                btn.classList.add('border-transparent', 'opacity-75');
+            });
+            buttonElement.classList.remove('border-transparent', 'opacity-75');
+            buttonElement.classList.add('ring-2', 'ring-gold', 'border-gold');
+        }
+
+        function addSelectedToCart(productId, price) {
+            // Obtener el nombre exacto del diseño seleccionado en esa tarjeta
+            const productName = document.getElementById(`name-${productId}`).textContent;
+            
+            const existingItem = cart.find(item => item.name === productName);
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
-                cart.push({ name, price, quantity: 1 });
+                cart.push({ name: productName, price, quantity: 1 });
             }
             updateCartUI();
-            alert(`¡"${name}" se agregó al carrito!`);
+            alert(`¡"${productName}" agregado al carrito!`);
         }
 
         function updateCartUI() {
