@@ -86,7 +86,7 @@
     <!-- CATÁLOGO DE PRODUCTOS -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full">
         <h2 class="text-3xl font-bold text-center mb-2">Nuestras Colecciones</h2>
-        <p class="text-center text-gray-500 mb-10">Desliza las miniaturas de cada colección para ver los personajes, estilos y tallas disponibles</p>
+        <p class="text-center text-gray-500 mb-10">Desliza las miniaturas de cada colección y elige tu talla u otro personaje deseado</p>
 
         <!-- Grilla de Colecciones -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -131,6 +131,27 @@
                         <h3 class="text-xl font-bold mt-2">Sets Pijamas Universos</h3>
                         <p id="name-univ" class="text-sm text-gray-600 mt-1 font-medium">Caballero · Talla XS a L</p>
                         <p id="price-univ" class="text-2xl font-bold text-black mt-3">$ 50.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-univ" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-univ" placeholder="Ej: Quiero diseño de Mafalda" class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -165,6 +186,27 @@
                         <h3 class="text-xl font-bold mt-2">Pijamas Premium</h3>
                         <p id="name-prem" class="text-sm text-gray-600 mt-1 font-medium">Niños · Tres piezas (2 a 8)</p>
                         <p id="price-prem" class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-prem" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-prem" placeholder="Ej: Motivo especial..." class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -192,6 +234,27 @@
                         <h3 class="text-xl font-bold mt-2">Set Pijama Satín</h3>
                         <p id="name-satin" class="text-sm text-gray-600 mt-1 font-medium">Dama · Talla XS a L</p>
                         <p id="price-satin" class="text-2xl font-bold text-black mt-3">$ 65.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-satin" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-satin" placeholder="Ej: Motivo especial..." class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -221,6 +284,27 @@
                         <h3 class="text-xl font-bold mt-2">Sudaderas Personalizadas</h3>
                         <p id="name-suda" class="text-sm text-gray-600 mt-1 font-medium">Dama · Chaqueta XS a L</p>
                         <p id="price-suda" class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-suda" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-suda" placeholder="Ej: Motivo especial..." class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -251,6 +335,27 @@
                         <h3 class="text-xl font-bold mt-2">Sets Femeninos</h3>
                         <p id="name-fem" class="text-sm text-gray-600 mt-1 font-medium">Batas · XS a L</p>
                         <p id="price-fem" class="text-2xl font-bold text-black mt-3">$ 25.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-fem" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-fem" placeholder="Ej: Motivo especial..." class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -260,7 +365,7 @@
                 </div>
             </div>
 
-            <!-- 6. UNIFORMES DE FÚTBOL (ACTUALIZADO) -->
+            <!-- 6. UNIFORMES DE FÚTBOL -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="futbol">
                 <div>
                     <div class="relative bg-gray-50">
@@ -271,13 +376,34 @@
                         <button onclick="changeImageWithPrice('futbol', 'deportivo1.jpg', 'Dragón blanco', 'Uniforme de fútbol Niños', 40000, this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="deportivo1.jpg" class="w-full h-full object-contain"></button>
                         <button onclick="changeImageWithPrice('futbol', 'deportivo2.jpg', 'Dragón fucsia', 'Uniformes de fútbol Dama', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo2.jpg" class="w-full h-full object-contain"></button>
                         <button onclick="changeImageWithPrice('futbol', 'deportivo3.jpg', 'Samurai', 'Uniformes de fútbol Caballero', 50000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo3.jpg" class="w-full h-full object-contain"></button>
-                        <button onclick="changeImageWithPrice('futbol', 'deportivo.jpg', 'Tasmania', 'Uniformes de fútbol manga larga adulto', 60000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('futbol', 'deportivo4.jpg', 'Tasmania', 'Uniformes de fútbol manga larga adulto', 60000, this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="deportivo4.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
                         <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Deportivo</span>
                         <h3 class="text-xl font-bold mt-2">Uniformes de Fútbol</h3>
                         <p id="name-futbol" class="text-sm text-gray-600 mt-1 font-medium">Uniforme de fútbol Niños</p>
                         <p id="price-futbol" class="text-2xl font-bold text-black mt-3">$ 40.000 COP</p>
+                        
+                        <!-- Selector de Talla y Nota -->
+                        <div class="mt-4 space-y-3 pt-3 border-t border-gray-100">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Elige tu Talla:</label>
+                                <select id="talla-futbol" class="w-full border border-gray-300 rounded-lg p-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold">
+                                    <option value="XS">Talla XS</option>
+                                    <option value="S">Talla S</option>
+                                    <option value="M">Talla M</option>
+                                    <option value="L">Talla L</option>
+                                    <option value="XL o Especial">Talla XL / Otra (Consultar)</option>
+                                    <option value="Infantil 2-4">Infantil (Talla 2 - 4)</option>
+                                    <option value="Infantil 6-8">Infantil (Talla 6 - 8)</option>
+                                    <option value="Infantil 10-14">Infantil (Talla 10 - 14)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">¿Deseas otro personaje u observaciones?</label>
+                                <input type="text" id="nota-futbol" placeholder="Ej: Motivo especial..." class="w-full border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
@@ -391,7 +517,13 @@
             const detailsText = document.getElementById(`name-${productId}`).textContent;
             const productPrice = productPrices[productId];
             
-            const fullName = `${collectionTitle} - ${characterName} (${detailsText})`;
+            const selectedTalla = document.getElementById(`talla-${productId}`).value;
+            const userNota = document.getElementById(`nota-${productId}`).value.trim();
+            
+            let fullName = `${collectionTitle} - ${characterName} (${detailsText}) | Talla: ${selectedTalla}`;
+            if (userNota) {
+                fullName += ` | Nota: ${userNota}`;
+            }
             
             const existingItem = cart.find(item => item.name === fullName);
             if (existingItem) {
@@ -400,7 +532,7 @@
                 cart.push({ name: fullName, price: productPrice, quantity: 1 });
             }
             updateCartUI();
-            alert(`¡"${collectionTitle} - ${characterName}" agregado al carrito!`);
+            alert(`¡"${collectionTitle}" agregado al carrito con éxito!`);
         }
 
         function updateCartUI() {
