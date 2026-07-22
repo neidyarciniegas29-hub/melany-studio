@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melany Studio | Pijamas & Buzos Personalizados</title>
+    <title>Melany Studio | Pijamas & Sets Personalizados</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,6 +32,14 @@
         h1, h2, h3, .brand-font {
             font-family: 'Playfair Display', serif;
         }
+        /* Ocultar barra de desplazamiento pero permitir scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #D4AF37;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-cream min-h-screen flex flex-col justify-between">
@@ -41,7 +49,7 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-center md:text-left">
                 <span class="text-2xl md:text-3xl font-bold tracking-widest brand-font text-black">MELANY <span class="text-gold">STUDIO</span></span>
-                <p class="text-[10px] tracking-widest uppercase text-gray-500">Pijamas & Buzos Personalizados</p>
+                <p class="text-[10px] tracking-widest uppercase text-gray-500">Pijamas & Sets Personalizados</p>
             </div>
             
             <div class="flex items-center space-x-4 md:space-x-6">
@@ -69,7 +77,7 @@
     <section class="bg-gradient-to-b from-white to-cream py-12 md:py-16 px-4 text-center border-b border-gold/20">
         <div class="max-w-3xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Pijamas y sets de tus universos favoritos</h1>
-            <p class="text-lg text-gray-600 mb-6 italic">Diseño y confección propia.</p>
+            <p class="text-lg text-gray-600 mb-6 italic">Diseño, comodidad y estilo para toda la familia.</p>
             <div class="inline-block border-t border-b border-gold py-2 px-4 md:px-6">
                 <p class="text-sm tracking-widest text-gold-dark font-medium uppercase">✨ Comodidad que amas, estilo que te representa ✨</p>
             </div>
@@ -79,159 +87,176 @@
     <!-- CATÁLOGO DE PRODUCTOS -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12 flex-grow w-full">
         <h2 class="text-3xl font-bold text-center mb-2">Nuestras Colecciones</h2>
-        <p class="text-center text-gray-500 mb-10">Haz clic en las miniaturas para ver los diferentes diseños disponibles</p>
+        <p class="text-center text-gray-500 mb-10">Desliza las miniaturas de cada colección para ver los personajes y tallas disponibles</p>
 
-        <!-- Grilla de Productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Grilla de Colecciones -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- PRODUCTO 1: Set Pijama Universos -->
+            <!-- 1. SETS PIJAMAS UNIVERSOS -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="univ">
                 <div>
-                    <!-- Imagen Principal -->
-                    <div class="relative">
-                        <img id="img-univ" src="pijama1.jpg" alt="Set Pijama Universos" class="w-full h-64 object-contain transition-all duration-300">
-                        <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    <div class="relative bg-gray-50">
+                        <img id="img-univ" src="pijama1.jpg" alt="Pijamas Universos" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-univ" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Caballero · Talla XS a L</span>
                     </div>
-                    <!-- Miniaturas / Selector de Fotos -->
-                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
-                        <button onclick="changeImage('univ', 'pijama1.jpg', 'Set Pijama Universos (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
-                            <img src="pijama1.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <button onclick="changeImage('univ', 'pijama2.jpg', 'Set Pijama Universos (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
-                            <img src="pijama2.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <!-- Aquí podrás agregar más fotos en el futuro simplemente copiando un botón igual cambiando pijama3.jpg -->
+                    <!-- Miniaturas con scroll horizontal (26 items) -->
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('univ', 'pijama1.jpg', 'Set Pijama Universos - Rock (Caballero XS a L)', 50000, 'Caballero · Talla XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="pijama1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama2.jpg', 'Set Pijama Universos - Fucks News (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama3.jpg', 'Set Pijama Universos - Dragón Ball (Niño 2 a 8)', 35000, 'Niño · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama4.jpg', 'Set Pijama Universos - K-Pop (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama5.jpg', 'Set Pijama Universos - Barbie (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama6.jpg', 'Set Pijama Universos - Kuromy (Niña 2 a 8)', 35000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama7.jpg', 'Set Pijama Universos - Bob Esponja/Melody (Niña 10 a 14)', 42000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama7.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama8.jpg', 'Set Pijama Universos - Stitch (Dama Short/Tiras)', 35000, 'Dama · Short/Tiras', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama8.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama9.jpg', 'Set Pijama Universos - Dragón Ball (Caballero XS a L)', 50000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama9.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama10.jpg', 'Set Pijama Universos - Lucifer (Dama Shorts XS a L)', 35000, 'Dama · Shorts XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama10.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama11.jpg', 'Set Pijama Universos - Chicas Superpoderosas (Niña 10 a 14)', 32000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama11.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama12.jpg', 'Set Pijama Universos - Goku (Niños 10 a 14)', 38000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama12.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama13.jpg', 'Set Pijama Universos - Demon Slayer (Niños 10 a 14)', 42000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama13.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama14.jpg', 'Set Pijama Universos - Nezuko (Niñas 10 a 14)', 42000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama14.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama15.jpg', 'Set Pijama Universos - BTS (Niñas 10 a 14)', 38000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama15.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama16.jpg', 'Set Pijama Universos - BTS (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama16.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama17.jpg', 'Set Pijama Universos - One Piece (Niño pantaloneta 10 a 14)', 32000, 'Niño · Pantaloneta 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama17.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama18.jpg', 'Set Pijama Universos - Winnie Pooh (Niñas 10 a 14)', 32000, 'Niñas · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama18.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama19.jpg', 'Set Pijama Universos - Cuadros (Caballero pantaloneta XS a L)', 38000, 'Caballero · Pantaloneta XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama19.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama20.jpg', 'Set Pijama Universos - Jack (Dama Shorts XS a L)', 35000, 'Dama · Shorts XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama20.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama21.jpg', 'Set Pijama Universos - Paw Patrol (Bebé 0/12 meses)', 28000, 'Bebé · 0/12 meses', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama21.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama22.jpg', 'Set Pijama Universos - Dinosaurios (Bebé 0/12 meses)', 28000, 'Bebé · 0/12 meses', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama22.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama23.jpg', 'Set Pijama Universos - Princesas (Niñas 2 a 8)', 35000, 'Niñas · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama23.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama24.jpg', 'Set Pijama Universos - Capitán América/Simpsons (Caballero XS a L)', 38000, 'Caballero · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama24.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama25.jpg', 'Set Pijama Universos - BTS (Dama XS a L)', 50000, 'Dama · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama25.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('univ', 'pijama26.jpg', 'Set Pijama Universos - Snoopy (Dama Plus)', 60000, 'Dama · Plus', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="pijama26.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Universos</span>
-                        <h3 class="text-xl font-bold mt-2">Set Pijama Universos</h3>
-                        <p class="text-sm text-gray-500 mt-1">Estampados icónicos para Dama y Caballero.</p>
-                        <p id="name-univ" class="hidden">Set Pijama Universos (Diseño 1)</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 60.000 COP</p>
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Colección Principal</span>
+                        <h3 class="text-xl font-bold mt-2">Sets Pijamas Universos</h3>
+                        <p id="name-univ" class="text-sm text-gray-600 mt-1 font-medium">Set Pijama Universos - Rock (Caballero XS a L)</p>
+                        <p id="price-univ" class="text-2xl font-bold text-black mt-3">$ 50.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('univ', 60000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addCurrentToCart('univ')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
             </div>
 
-            <!-- PRODUCTO 2: Pijamas Premium (Con Capota) -->
+            <!-- 2. PIJAMAS PREMIUM -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="prem">
                 <div>
-                    <div class="relative">
-                        <img id="img-prem" src="premium1.jpg" alt="Pijamas Premium" class="w-full h-64 object-contain transition-all duration-300">
-                        <span id="badge-prem" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    <div class="relative bg-gray-50">
+                        <img id="img-prem" src="premium1.jpg" alt="Pijamas Premium" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-prem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Niños · Tres piezas (2 a 8)</span>
                     </div>
-                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
-                        <button onclick="changeImage('prem', 'premium1.jpg', 'Pijama Premium (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
-                            <img src="premium1.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <button onclick="changeImage('prem', 'premium2.jpg', 'Pijama Premium (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
-                            <img src="premium2.jpg" class="w-full h-full object-contain">
-                        </button>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('prem', 'premium1.jpg', 'Pijama Premium - Bob Esponja (Niños 3 pzas 2 a 8)', 70000, 'Niños · Tres piezas (2 a 8)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="premium1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium2.jpg', 'Pijama Premium - Nezuko (Niñas 3 pzas 10 a 14)', 82000, 'Niñas · Tres piezas (10 a 14)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium3.jpg', 'Pijama Premium - Stranger Things (Caballero 3 pzas XS-L)', 110000, 'Caballero · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium4.jpg', 'Pijama Premium - Dragón Ball (Caballero 3 pzas XS-L)', 90000, 'Caballero · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium5.jpg', 'Pijama Premium - Dinosaurios (Caballero 4 pzas XS-L)', 130000, 'Caballero · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium6.jpg', 'Pijama Premium - Capibara (Niñas 3 pzas 2 a 8)', 62000, 'Niñas · Tres piezas (2 a 8)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium7.jpg', 'Pijama Premium - Sonic (Niños 3 pzas 10 a 14)', 78000, 'Niños · Tres piezas (10 a 14)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium7.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium8.jpg', 'Pijama Premium - Tom y Jerry (Dama 3 pzas XS-L)', 85000, 'Dama · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium8.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium9.jpg', 'Pijama Premium - Nezuko (Dama 4 pzas XS-L)', 125000, 'Dama · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium9.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium10.jpg', 'Pijama Premium - Harry Potter (Dama 4 pzas XS-L)', 125000, 'Dama · Cuatro piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium10.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('prem', 'premium11.jpg', 'Pijama Premium - Jack (Dama 3 pzas XS-L)', 75000, 'Dama · Tres piezas (XS-L)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="premium11.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Premium</span>
-                        <h3 class="text-xl font-bold mt-2">Pijama Premium con Capota</h3>
-                        <p class="text-sm text-gray-500 mt-1">Estilo hoodie y abrigo superior.</p>
-                        <p id="name-prem" class="hidden">Pijama Premium (Diseño 1)</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 120.000 COP</p>
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Alta Calidad</span>
+                        <h3 class="text-xl font-bold mt-2">Pijamas Premium</h3>
+                        <p id="name-prem" class="text-sm text-gray-600 mt-1 font-medium">Pijama Premium - Bob Esponja (Niños 3 pzas 2 a 8)</p>
+                        <p id="price-prem" class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('prem', 120000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addCurrentToCart('prem')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
             </div>
 
-            <!-- PRODUCTO 3: Pijamas en Satín -->
+            <!-- 3. SET PIJAMA SATÍN -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="satin">
                 <div>
-                    <div class="relative">
-                        <img id="img-satin" src="satin1.jpg" alt="Pijamas en Satín" class="w-full h-64 object-contain transition-all duration-300">
-                        <span id="badge-satin" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    <div class="relative bg-gray-50">
+                        <img id="img-satin" src="satin1.jpg" alt="Pijamas Satín" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-satin" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Dama · Talla XS a L</span>
                     </div>
-                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
-                        <button onclick="changeImage('satin', 'satin1.jpg', 'Set Pijama Satín (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
-                            <img src="satin1.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <button onclick="changeImage('satin', 'satin2.jpg', 'Set Pijama Satín (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
-                            <img src="satin2.jpg" class="w-full h-full object-contain">
-                        </button>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('satin', 'satin1.jpg', 'Set Pijama Satín - Elegante (Dama XS a L)', 65000, 'Dama · Talla XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="satin1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin2.jpg', 'Set Pijama Satín - Kuromy (Niña 10 a 14)', 55000, 'Niña · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin3.jpg', 'Set Pijama Satín - Paw Patrol (Niña 2 a 8)', 45000, 'Niña · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('satin', 'satin4.jpg', 'Set Pijama Satín - Hello Kitty (Niña Shorts 2 a 8)', 40000, 'Niña · Shorts 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="satin4.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Satín</span>
-                        <h3 class="text-xl font-bold mt-2">Set Pijama en Satín</h3>
-                        <p class="text-sm text-gray-500 mt-1">Fresco, suave y elegante.</p>
-                        <p id="name-satin" class="hidden">Set Pijama Satín (Diseño 1)</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 70.000 COP</p>
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Elegancia</span>
+                        <h3 class="text-xl font-bold mt-2">Set Pijama Satín</h3>
+                        <p id="name-satin" class="text-sm text-gray-600 mt-1 font-medium">Set Pijama Satín - Elegante (Dama XS a L)</p>
+                        <p id="price-satin" class="text-2xl font-bold text-black mt-3">$ 65.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('satin', 70000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addCurrentToCart('satin')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
             </div>
 
-            <!-- PRODUCTO 4: Sudaderas Personalizadas -->
+            <!-- 4. SUDADERAS -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="suda">
                 <div>
-                    <div class="relative">
-                        <img id="img-suda" src="sudadera1.jpg" alt="Sudaderas Personalizadas" class="w-full h-64 object-contain transition-all duration-300">
-                        <span id="badge-suda" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    <div class="relative bg-gray-50">
+                        <img id="img-suda" src="sudadera1.jpg" alt="Sudaderas" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-suda" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Dama · Chaqueta XS a L</span>
                     </div>
-                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
-                        <button onclick="changeImage('suda', 'sudadera1.jpg', 'Sudadera (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
-                            <img src="sudadera1.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <button onclick="changeImage('suda', 'sudadera2.jpg', 'Sudadera (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
-                            <img src="sudadera2.jpg" class="w-full h-full object-contain">
-                        </button>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('suda', 'sudadera1.jpg', 'Sudadera - Sailor Moon (Dama chaqueta XS a L)', 130000, 'Dama · Chaqueta XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="sudadera1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera2.jpg', 'Sudadera - Negra/Amarillo (Dama buzo XS a L)', 120000, 'Dama · Buzo XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera3.jpg', 'Sudadera - Infantiles (Niños 10 a 14)', 90000, 'Niños · Talla 10 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera4.jpg', 'Sudadera - Gris/Negro (Caballero XS a L)', 120000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera5.jpg', 'Sudadera - Negro/Rojo (Caballero XS a L)', 120000, 'Caballero · Talla XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('suda', 'sudadera6.jpg', 'Sudadera - Infantiles (Niños 2 a 8)', 65000, 'Niños · Talla 2 a 8', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="sudadera6.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Sudaderas</span>
-                        <h3 class="text-xl font-bold mt-2">Sudadera Personalizada</h3>
-                        <p class="text-sm text-gray-500 mt-1">Diseños únicos y máxima comodidad.</p>
-                        <p id="name-suda" class="hidden">Sudadera (Diseño 1)</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Abrigo & Estilo</span>
+                        <h3 class="text-xl font-bold mt-2">Sudaderas Personalizadas</h3>
+                        <p id="name-suda" class="text-sm text-gray-600 mt-1 font-medium">Sudadera - Sailor Moon (Dama chaqueta XS a L)</p>
+                        <p id="price-suda" class="text-2xl font-bold text-black mt-3">$ 130.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('suda', 130000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addCurrentToCart('suda')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
             </div>
 
-            <!-- PRODUCTO 5: Uniformes Deportivos -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30" data-product-id="depo">
+            <!-- 5. SETS FEMENINOS -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/20 flex flex-col justify-between transition hover:shadow-gold/30 md:col-span-2 max-w-xl mx-auto w-full" data-product-id="fem">
                 <div>
-                    <div class="relative">
-                        <img id="img-depo" src="deportivo1.jpg" alt="Uniformes Deportivos" class="w-full h-64 object-contain transition-all duration-300">
-                        <span id="badge-depo" class="absolute top-3 left-3 text-xs bg-black/70 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Diseño 1</span>
+                    <div class="relative bg-gray-50">
+                        <img id="img-fem" src="femenina1.jpg" alt="Sets Femeninos" class="w-full h-72 object-contain p-2 transition-all duration-300">
+                        <span id="badge-fem" class="absolute top-3 left-3 text-xs bg-black/80 text-gold font-semibold px-2.5 py-1 rounded backdrop-blur-sm">Batas · XS a L</span>
                     </div>
-                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto">
-                        <button onclick="changeImage('depo', 'deportivo1.jpg', 'Uniforme Deportivo (Diseño 1)', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold">
-                            <img src="deportivo1.jpg" class="w-full h-full object-contain">
-                        </button>
-                        <button onclick="changeImage('depo', 'deportivo2.jpg', 'Uniforme Deportivo (Diseño 2)', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100">
-                            <img src="deportivo2.jpg" class="w-full h-full object-contain">
-                        </button>
+                    <div class="flex space-x-2 p-3 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+                        <button onclick="changeImageWithPrice('fem', 'femenina1.jpg', 'Set Femenino - Bugs Bunny (Batas XS a L)', 25000, 'Batas · XS a L', this)" class="border-2 border-gold rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none ring-2 ring-gold bg-white"><img src="femenina1.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina2.jpg', 'Set Femenino - Goofy (Batas XS a L)', 25000, 'Batas · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina2.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina3.jpg', 'Set Femenino - Stitch (Enterizo Shorts XS a L)', 32000, 'Enterizo Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina3.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina4.jpg', 'Set Femenino - Sailor Moon (Enterizo Shorts XS a L)', 32000, 'Enterizo Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina4.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina5.jpg', 'Set Femenino - Infantiles (Enterizos shorts 2 a 14)', 26000, 'Enterizos shorts · 2 a 14', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina5.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina6.jpg', 'Set Femenino - Naruto (Body/Shorts XS a L)', 32000, 'Body/Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina6.jpg" class="w-full h-full object-contain"></button>
+                        <button onclick="changeImageWithPrice('fem', 'femenina7.jpg', 'Set Femenino - Simpson (Body/Shorts XS a L)', 32000, 'Body/Shorts · XS a L', this)" class="border-2 border-transparent rounded overflow-hidden w-14 h-14 flex-shrink-0 focus:outline-none opacity-70 hover:opacity-100 bg-white"><img src="femenina7.jpg" class="w-full h-full object-contain"></button>
                     </div>
                     <div class="p-5">
-                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Deportivo</span>
-                        <h3 class="text-xl font-bold mt-2">Uniforme Deportivo</h3>
-                        <p class="text-sm text-gray-500 mt-1">Con estilo moderno y tela deportiva fresca.</p>
-                        <p id="name-depo" class="hidden">Uniforme Deportivo (Diseño 1)</p>
-                        <p class="text-2xl font-bold text-black mt-3">$ 60.000 COP</p>
+                        <span class="text-xs bg-gold/20 text-gold-dark font-semibold px-2.5 py-1 rounded">Femenino</span>
+                        <h3 class="text-xl font-bold mt-2">Sets Femeninos</h3>
+                        <p id="name-fem" class="text-sm text-gray-600 mt-1 font-medium">Set Femenino - Bugs Bunny (Batas XS a L)</p>
+                        <p id="price-fem" class="text-2xl font-bold text-black mt-3">$ 25.000 COP</p>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('depo', 60000)" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
+                    <button onclick="addCurrentToCart('fem')" class="w-full bg-black text-gold py-3 rounded-lg font-bold hover:bg-gold hover:text-black transition shadow-md">
                         Agregar al Carrito
                     </button>
                 </div>
@@ -239,9 +264,9 @@
 
         </div>
 
-        <div class="mt-16 text-center bg-black text-gold p-6 rounded-xl shadow-inner">
+        <div class="mt-16 text-center bg-black text-gold p-6 rounded-xl shadow-inner max-w-3xl mx-auto">
             <h3 class="text-2xl font-bold">¿Quieres personalizar tu propio diseño o conjunto familiar?</h3>
-            <p class="text-gray-300 mt-2 mb-4">Escríbenos directamente a WhatsApp y te ayudamos a crearlo.</p>
+            <p class="text-gray-300 mt-2 mb-4">Escríbenos directamente a WhatsApp y con gusto te ayudamos a crearlo.</p>
             <a href="https://wa.me/573125199941" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg">
                 <i class="fa-brands fa-whatsapp mr-2"></i> Chatear con Melany Studio
             </a>
@@ -303,20 +328,28 @@
     <script>
         let cart = [];
 
+        // Precios actuales seleccionados por cada colección
+        let productPrices = {
+            univ: 50000,
+            prem: 70000,
+            satin: 65000,
+            suda: 130000,
+            fem: 25000
+        };
+
         function toggleCart() {
             const modal = document.getElementById('cart-modal');
             modal.classList.toggle('hidden');
         }
 
-        // Función para cambiar la foto grande y registrar qué diseño está seleccionado
-        function changeImage(productId, imageSrc, description, buttonElement) {
-            // Cambiar imagen principal
+        function changeImageWithPrice(productId, imageSrc, description, price, badgeText, buttonElement) {
             document.getElementById(`img-${productId}`).src = imageSrc;
-            
-            // Guardar ocultamente el nombre/diseño exacto seleccionado
             document.getElementById(`name-${productId}`).textContent = description;
+            document.getElementById(`badge-${productId}`).textContent = badgeText;
+            
+            productPrices[productId] = price;
+            document.getElementById(`price-${productId}`).textContent = `$ ${price.toLocaleString()} COP`;
 
-            // Actualizar estilo visual de las miniaturas (marcar con borde dorado la activa)
             const parentContainer = buttonElement.parentElement;
             const buttons = parentContainer.querySelectorAll('button');
             buttons.forEach(btn => {
@@ -327,15 +360,15 @@
             buttonElement.classList.add('ring-2', 'ring-gold', 'border-gold');
         }
 
-        function addSelectedToCart(productId, price) {
-            // Obtener el nombre exacto del diseño seleccionado en esa tarjeta
+        function addCurrentToCart(productId) {
             const productName = document.getElementById(`name-${productId}`).textContent;
+            const productPrice = productPrices[productId];
             
             const existingItem = cart.find(item => item.name === productName);
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
-                cart.push({ name: productName, price, quantity: 1 });
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
             }
             updateCartUI();
             alert(`¡"${productName}" agregado al carrito!`);
@@ -364,10 +397,13 @@
                 html += `
                     <div class="flex justify-between items-center border-b pb-3">
                         <div>
-                            <h4 class="font-medium text-sm">${item.name}</h4>
+                            <h4 class="font-medium text-sm text-gray-800">${item.name}</h4>
                             <p class="text-xs text-gray-500">$ ${item.price.toLocaleString()} x ${item.quantity}</p>
                         </div>
-                        <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700 text-sm"><i class="fa-solid fa-trash"></i></button>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-sm">$ ${subtotal.toLocaleString()}</span>
+                            <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700 text-sm p-1"><i class="fa-solid fa-trash"></i></button>
+                        </div>
                     </div>
                 `;
             });
@@ -387,16 +423,22 @@
                 return;
             }
 
-            let message = "Hola *Melany Studio*, quiero realizar el siguiente pedido desde la página web:%0A%0A";
+            let message = "✨ *NUEVO PEDIDO - MELANY STUDIO* ✨%0A%0A";
+            message += "Hola, me gustaría realizar el siguiente pedido desde la tienda web:%0A%0A";
+            
             let totalSum = 0;
 
             cart.forEach(item => {
                 let subtotal = item.price * item.quantity;
                 totalSum += subtotal;
-                message += `• ${item.quantity}x ${item.name} - $ ${subtotal.toLocaleString()} COP%0A`;
+                message += `🛍️ *${item.name}*%0A`;
+                message += `   Cantidad: ${item.quantity} | Subtotal: $ ${subtotal.toLocaleString()} COP%0A%0A`;
             });
 
-            message += `%0A*Total a pagar: $ ${totalSum.toLocaleString()} COP*%0A%0A¡Quedo atento(a) para coordinar el pago y la entrega!`;
+            message += `-----------------------------------%0A`;
+            message += `💰 *TOTAL A PAGAR: $ ${totalSum.toLocaleString()} COP*%0A`;
+            message += `-----------------------------------%0A%0A`;
+            message += `Quedo atento(a) para coordinar el pago, la dirección de entrega y confirmar mi pedido. ¡Gracias! ✨`;
 
             const phone = "573125199941";
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
